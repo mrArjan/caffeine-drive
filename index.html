@@ -3,195 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caffeine Drive</title>
-    <!-- Google Fonts for modern typography -->
+    <title>Caffeine Drive | Official Link in Bio</title>
+    
+    <!-- FAVICON (Browser Tab Icon) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23121212'/><path d='M68 32C62.5 25.5 53 23 44 26.5C33 30.8 26 41.5 26 53.5C26 66.5 35.5 76 48.5 76C58.5 76 66.5 70 70 61' stroke='%23EEEEEE' stroke-width='10' stroke-linecap='round' fill='none'/><path d='M42 38L62 62' stroke='%23E63946' stroke-width='8' stroke-linecap='round'/></svg>">
+
+    <!-- EXTERNAL STYLESHEET -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23121212'/><path d='M68 32C62.5 25.5 53 23 44 26.5C33 30.8 26 41.5 26 53.5C26 66.5 35.5 76 48.5 76C58.5 76 66.5 70 70 61' stroke='%23EEEEEE' stroke-width='10' stroke-linecap='round' fill='none'/><path d='M42 38L62 62' stroke='%23E63946' stroke-width='8' stroke-linecap='round'/></svg>">
-    
-    <style>
-        /* CSS RESET & VARIABLES */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        :root {
-            --bg-color: #121212;
-            --card-bg: #1E1E1E;
-            --text-main: #EEEEEE;
-            --text-muted: #888888;
-            --accent-crimson: #E63946;
-            --accent-cyan: #00F5D4;
-            --border-color: #2A2A2A;
-            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: var(--font-family);
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px 16px;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* CONTAINER LAYOUT */
-        .container {
-            width: 100%;
-            max-width: 480px; /* Standard mobile-first container max-width */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        /* HEADER SECTION */
-        .header {
-            margin-bottom: 28px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--accent-crimson);
-            margin-bottom: 16px;
-            box-shadow: 0 0 15px rgba(230, 57, 70, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .avatar:hover {
-            transform: scale(1.05);
-        }
-
-        .band-name {
-            font-size: 1.75rem;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-        }
-
-        .bio {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            font-weight: 400;
-            line-height: 1.4;
-            max-width: 320px;
-        }
-
-        /* LINKS SECTION */
-        .links-container {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-bottom: 32px;
-        }
-
-        .link-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            padding: 16px 20px;
-            background-color: var(--card-bg);
-            color: var(--text-main);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* BUTTON HOVER & ACTIVE STATES */
-        .link-btn:hover {
-            border-color: var(--accent-crimson);
-            color: #FFFFFF;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(230, 57, 70, 0.25);
-            background-color: #252525;
-        }
-
-        .link-btn:active {
-            transform: translateY(0);
-        }
-
-        /* Highlight feature for booking button */
-        .link-btn.featured {
-            border-color: var(--accent-cyan);
-            box-shadow: 0 0 10px rgba(0, 245, 212, 0.15);
-        }
-
-        .link-btn.featured:hover {
-            border-color: var(--accent-cyan);
-            box-shadow: 0 4px 15px rgba(0, 245, 212, 0.3);
-        }
-
-        /* FOOTER SECTION */
-        .footer {
-            font-size: 0.8rem;
-            color: var(--text-muted);
-            margin-top: auto;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <main class="container">
+    <!-- BACKGROUND GLOW EFFECTS -->
+    <div class="bg-glow ambient-1"></div>
+    <div class="bg-glow ambient-2"></div>
+
+    <main class="wrapper">
         
-        <!-- HEADER SECTION -->
+        <!-- HEADER / BAND PROFILE -->
         <header class="header">
-            <!-- REPLACE 'https://via.placeholder.com/100' WITH YOUR LOGO IMAGE FILE PATH OR IMAGE URL -->
-            <img src="src/Launcher Studio Logo.png" alt="Caffeine Drive Logo" class="avatar">
-            
+            <div class="logo-wrapper">
+                <!-- BAND LOGO/IMAGE -->
+                <!-- Replace 'logo.png' below with your actual image file path (e.g., logo.jpg, band-photo.webp) -->
+                <img src="src/Launcher Studio Logo.png" alt="Caffeine Drive Band Photo" class="band-logo-img">
+                
+                <!-- <span class="live-badge"><span class="pulse"></span> LIVE</span> -->
+            </div>
+
             <h1 class="band-name">Caffeine Drive</h1>
-            <p class="bio">Aspiring OPM Emo Pop Punk band from Antipolo 🇵🇭</p>
+            <p class="bio">2000s Alt-Rock / Emo / Post-Hardcore from PH 🇵🇭</p>
         </header>
 
-        <!-- SOCIAL & LINKS SECTION -->
-        <nav class="links-container">
-            <!-- Replace the href="#" values below with your actual profile links -->
-            
-            <!-- <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" class="link-btn">
-                🎵 Spotify / Stream Our Music
-            </a> -->
+        <!-- LINKS CONTAINER -->
+        <nav class="links">
+            <!-- Spotify (Commented out until ready) -->
+            <!-- 
+            <a href="https://spotify.com" target="_blank" rel="noopener noreferrer" class="card">
+                <span class="icon">🎵</span>
+                <span class="label">Spotify / Stream Our Music</span>
+                <span class="arrow">↗</span>
+            </a> 
+            -->
 
-            <a href="https://www.tiktok.com/@caffeine.drive" target="_blank" rel="noopener noreferrer" class="link-btn">
-                🎬 TikTok
+            <a href="https://www.tiktok.com/@caffeine.drive" target="_blank" rel="noopener noreferrer" class="card">
+                <span class="icon">🎬</span>
+                <span class="label">TikTok</span>
+                <span class="arrow">↗</span>
             </a>
 
-            <a href="https://www.instagram.com/caffeine_drive/" target="_blank" rel="noopener noreferrer" class="link-btn">
-                📸 Instagram
+            <a href="https://www.instagram.com/caffeine_drive/" target="_blank" rel="noopener noreferrer" class="card">
+                <span class="icon">📸</span>
+                <span class="label">Instagram</span>
+                <span class="arrow">↗</span>
             </a>
 
-            <a href="https://www.facebook.com/profile.php?id=100063847811624" target="_blank" rel="noopener noreferrer" class="link-btn">
-                📘 Facebook
+            <a href="https://www.facebook.com/profile.php?id=100063847811624" target="_blank" rel="noopener noreferrer" class="card">
+                <span class="icon">📘</span>
+                <span class="label">Facebook</span>
+                <span class="arrow">↗</span>
             </a>
 
-            <a href="https://www.youtube.com/@Caffeine_Drive" target="_blank" rel="noopener noreferrer" class="link-btn">
-                📺 YouTube
+            <a href="https://www.youtube.com/@Caffeine_Drive" target="_blank" rel="noopener noreferrer" class="card">
+                <span class="icon">📺</span>
+                <span class="label">YouTube</span>
+                <span class="arrow">↗</span>
             </a>
 
-            <a href="mailto:caffeinedrive.band@gmail.com?subject=Gig%20Booking%20Inquiry%20-%20Caffeine%20Drive" class="link-btn featured">
-                📩 Gig Bookings & Inquiries
+            <!-- FEATURED BOOKING CARD -->
+            <a href="mailto:caffeinedrive.band@gmail.com?subject=Gig%20Booking%20Inquiry%20-%20Caffeine%20Drive" class="card featured">
+                <span class="icon">📩</span>
+                <span class="label">Gig Bookings & Inquiries</span>
+                <span class="arrow">↗</span>
             </a>
         </nav>
 
-        <!-- FOOTER SECTION -->
+        <!-- FOOTER -->
         <footer class="footer">
             <p>&copy; 2026 Caffeine Drive. All rights reserved.</p>
         </footer>
